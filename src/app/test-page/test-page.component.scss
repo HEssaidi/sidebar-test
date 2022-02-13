@@ -1,0 +1,31 @@
+.page-container {
+    height: 100%;
+}
+
+.sidebar {
+    height: 100%;
+    width: 300px;
+    background: orange;
+}
+
+.list-items {
+    padding-top: 100px;
+}
+
+
+.list-item {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-family:"Roboto" ;
+    cursor: pointer;
+}
+.list-item:hover {
+    color: white;
+}
+
+.list-item em.material-icons{
+    margin-right: 12px;
+}
