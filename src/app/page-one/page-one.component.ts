@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageOneComponent implements OnInit {
 
+
+  title = "first page works fine !"
   constructor() {}
   
 

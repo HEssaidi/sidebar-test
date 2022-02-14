@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { PageOneComponent } from './page-one/page-one.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -26,10 +27,18 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('sidebar-implementation');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('sidebar-implementation app is running!');
+  // it('page one should render title', () => {
+  //   const fixture = TestBed.createComponent(PageOneComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.nativeElement;
+  //   expect(compiled.querySelector('h1').textContent).toContain('page-one works!');
+  // });
+
+  let h1: HTMLElement;
+  it('page one should render clg', () => {
+    const fixture = TestBed.createComponent(PageOneComponent);
+    const pageOneComponent = fixture.componentInstance; // BannerComponent test instance
+    h1 = fixture.nativeElement.querySelector('h1');
+    expect(h1.textContent).toContain(pageOneComponent.title);
   });
 });
