@@ -16,4 +16,5 @@ this test fails, cause Binding happens when Angular performs change detection.
 ##### detectChanges() 
 
 
-You must tell the TestBed to perform data binding by calling fixture.detectChanges(). Only then does the `<h1>` have the expected title. use `fixture.detectChanges();`
+You must tell the TestBed to perform data binding by calling fixture.detectChanges(). Only then does the `<h1>` have the expected title. use `fixture.detectChanges();` <br/> More informations check out this link 
+[Angular testing components scenarios](https://angular.io/guide/testing-components-scenarios)
