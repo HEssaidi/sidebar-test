@@ -35,11 +35,14 @@
     width: 5px;
     background-color: white;
     opacity: 0;
+    transform: scaleY(0);
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 
 .list-item:hover::before {
     opacity: 1;
+    transform: scaleY(1);
 }
 .list-item em.material-icons{
     margin-right: 12px;
