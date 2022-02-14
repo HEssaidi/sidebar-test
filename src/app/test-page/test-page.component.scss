@@ -15,6 +15,7 @@
 
 .list-item {
     display: flex;
+    position: relative;
     align-items: center;
     font-size: 20px;
     color: white;
@@ -25,7 +26,21 @@
 .list-item:hover {
     color: white;
 }
+.list-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: white;
+    opacity: 0;
+}
 
+
+.list-item:hover::before {
+    opacity: 1;
+}
 .list-item em.material-icons{
     margin-right: 12px;
 }
