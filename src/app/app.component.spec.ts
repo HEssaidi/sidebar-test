@@ -34,11 +34,13 @@ describe('AppComponent', () => {
   //   expect(compiled.querySelector('h1').textContent).toContain('page-one works!');
   // });
 
-  let h1: HTMLElement;
+  
   it('page one should render clg', () => {
     const fixture = TestBed.createComponent(PageOneComponent);
     const pageOneComponent = fixture.componentInstance; // BannerComponent test instance
-    h1 = fixture.nativeElement.querySelector('h1');
+    // Binding happens when Angular performs change detection.
+    fixture.detectChanges();
+    const h1 = fixture.nativeElement.querySelector('h1');
     expect(h1.textContent).toContain(pageOneComponent.title);
   });
 });
